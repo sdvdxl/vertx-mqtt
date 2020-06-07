@@ -59,11 +59,11 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
   public void publishBigMessage(TestContext context) {
 
     this.async = context.async();
-
+    MqttClient client =null;
     try {
 
       MemoryPersistence persistence = new MemoryPersistence();
-      MqttClient client = new MqttClient(String.format("tcp://%s:%d", MQTT_SERVER_HOST, MQTT_SERVER_PORT), "12345", persistence);
+      client = new MqttClient(String.format("tcp://%s:%d", MQTT_SERVER_HOST, MQTT_SERVER_PORT), "12345", persistence);
       client.connect();
 
       byte[] message = new byte[MQTT_BIG_MESSAGE_SIZE];
@@ -71,11 +71,19 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
       client.publish(MQTT_TOPIC, message, 0, false);
 
       context.assertTrue(true);
-
+      System.out.println("================================");
     } catch (MqttException e) {
 
       context.assertTrue(false);
       e.printStackTrace();
+    }finally {
+      try {
+        if (client != null) {
+          client.close();
+        }
+      } catch (MqttException e) {
+        e.printStackTrace();
+      }
     }
   }
 
