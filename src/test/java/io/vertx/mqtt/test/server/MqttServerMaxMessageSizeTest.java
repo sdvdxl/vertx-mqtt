@@ -69,7 +69,7 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
 
       MemoryPersistence persistence = new MemoryPersistence();
       client = new MqttAsyncClient(String.format("tcp://%s:%d", MQTT_SERVER_HOST, MQTT_SERVER_PORT), "12345", persistence);
-      client.connect();
+      client.connect().waitForCompletion();
 
       byte[] message = new byte[MQTT_BIG_MESSAGE_SIZE];
 
