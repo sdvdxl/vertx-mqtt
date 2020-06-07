@@ -32,6 +32,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * MQTT server testing about the maximum message size
  */
@@ -64,12 +66,12 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
 
       MemoryPersistence persistence = new MemoryPersistence();
       client = new MqttClient(String.format("tcp://%s:%d", MQTT_SERVER_HOST, MQTT_SERVER_PORT), "12345", persistence);
+      client.setTimeToWait(TimeUnit.SECONDS.toMillis(3));
       client.connect();
 
       byte[] message = new byte[MQTT_BIG_MESSAGE_SIZE];
 
       client.publish(MQTT_TOPIC, message, 0, false);
-
       context.assertTrue(true);
       System.out.println("================================");
     } catch (MqttException e) {
