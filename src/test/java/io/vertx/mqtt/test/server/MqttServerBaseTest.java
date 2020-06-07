@@ -37,12 +37,10 @@ import java.security.KeyStore;
 @RunWith(VertxUnitRunner.class)
 public abstract class MqttServerBaseTest {
 
-  private static final Logger log = LoggerFactory.getLogger(MqttServerBaseTest.class);
-
   protected static final String MQTT_SERVER_HOST = "localhost";
   protected static final int MQTT_SERVER_PORT = 1883;
   protected static final int MQTT_SERVER_TLS_PORT = 8883;
-
+  private static final Logger log = LoggerFactory.getLogger(MqttServerBaseTest.class);
   protected Vertx vertx;
   protected MqttServer mqttServer;
   protected Throwable rejection;
@@ -91,8 +89,12 @@ public abstract class MqttServerBaseTest {
    */
   protected void tearDown(TestContext context) {
 
-    this.mqttServer.close(context.asyncAssertSuccess());
-    this.vertx.close(context.asyncAssertSuccess());
+    this.mqttServer.close(context.asyncAssertSuccess(h -> {
+      System.out.println("close mqtt server");
+    }));
+    this.vertx.close(context.asyncAssertSuccess(h -> {
+      System.out.println("close mqtt server");
+    }));
   }
 
   protected void endpointHandler(MqttEndpoint endpoint, TestContext context) {
@@ -104,7 +106,7 @@ public abstract class MqttServerBaseTest {
    * Socket factory for Paho MQTT client so that used trust store and keystore can be configured from vertx-core test resources.
    *
    * @param trustStoreName Trust storename in classpath format
-   * @param keyStoreName Key store name in classpath format
+   * @param keyStoreName   Key store name in classpath format
    * @return SSLSocketFactory instance with requested stores
    * @throws Exception
    */

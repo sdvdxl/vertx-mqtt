@@ -81,7 +81,7 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
 
   @After
   public void after(TestContext context) {
-
+    System.out.println("in after");
     this.tearDown(context);
   }
 
