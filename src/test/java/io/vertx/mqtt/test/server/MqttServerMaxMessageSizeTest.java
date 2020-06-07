@@ -90,13 +90,14 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
 
     endpoint.exceptionHandler(t -> {
       log.error("Exception raised", t);
-
+      System.out.println(t.getClass());
       if (t instanceof DecoderException) {
         this.async.complete();
+        System.out.println("======== complete");
       }
 
     });
-
+    System.out.println("======== accept");
     endpoint.accept(false);
   }
 }

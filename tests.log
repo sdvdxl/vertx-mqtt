@@ -1,0 +1,407 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for io.vertx:vertx-mqtt:jar:4.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-failsafe-plugin is missing. @ line 134, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------< io.vertx:vertx-mqtt >-------------------------
+[INFO] Building Vert.x MQTT 4.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ vertx-mqtt ---
+[INFO] 
+[INFO] --- maven-processor-plugin:3.2.0:process (generate-sources) @ vertx-mqtt ---
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.impl.MqttServerImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.impl.MqttTopicSubscriptionImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.impl.MqttEndpointImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.impl.MqttClientImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.impl.MqttServerConnection is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.messages.impl.MqttSubAckMessageImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.messages.impl.MqttUnsubscribeMessageImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.messages.impl.MqttConnAckMessageImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.messages.impl.MqttPublishMessageImpl is in an implementation package 
+警告: io.vertx.codegen.CodeGen - Processed element io.vertx.mqtt.messages.impl.MqttSubscribeMessageImpl is in an implementation package 
+[INFO] diagnostic: 注: Loaded cheatsheet code generator
+[INFO] diagnostic: 注: Loaded cheatsheet code generator
+[INFO] diagnostic: 注: Loaded data_object_converters code generator
+unhandled type io.vertx.core.net.JdkSSLEngineOptions
+unhandled type io.vertx.core.net.KeyCertOptions
+unhandled type io.vertx.core.net.JksOptions
+unhandled type io.vertx.core.net.OpenSSLEngineOptions
+unhandled type io.vertx.core.net.PemKeyCertOptions
+unhandled type io.vertx.core.net.PemTrustOptions
+unhandled type io.vertx.core.net.PfxOptions
+unhandled type io.vertx.core.net.PfxOptions
+unhandled type io.vertx.core.net.ProxyOptions
+unhandled type io.vertx.core.net.SSLEngineOptions
+unhandled type io.vertx.core.net.TrustOptions
+unhandled type io.vertx.core.net.JksOptions
+unhandled type io.vertx.core.net.JdkSSLEngineOptions
+unhandled type io.vertx.core.net.KeyCertOptions
+unhandled type io.vertx.core.net.JksOptions
+unhandled type io.vertx.core.net.OpenSSLEngineOptions
+unhandled type io.vertx.core.net.PemKeyCertOptions
+unhandled type io.vertx.core.net.PemTrustOptions
+unhandled type io.vertx.core.net.PfxOptions
+unhandled type io.vertx.core.net.PfxOptions
+unhandled type io.vertx.core.net.SSLEngineOptions
+unhandled type io.vertx.core.net.TrustOptions
+unhandled type io.vertx.core.net.JksOptions
+unhandled type byte[]
+[INFO] diagnostic: 注: Generated model io.vertx.mqtt.MqttAuth: asciidoc/dataobjects.adoc
+[INFO] diagnostic: 注: Generated model io.vertx.mqtt.MqttClientOptions: generated/io/vertx/mqtt/MqttClientOptionsConverter.java
+[WARNING] diagnostic: 警告: 类型 '[PathForCodeGenProcessor]' 的文件未关闭; 将不针对这些类型进行注释处理
+[WARNING] diagnostic: 警告: 以下选项未被任何处理程序识别: '[maven.artifactId, maven.version, codegen.output.data_object_converters, maven.groupId]'
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ vertx-mqtt ---
+[INFO] Source directory: /Users/dulongshao/workspace/java/vertx-mqtt/src/main/generated added.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ vertx-mqtt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dulongshao/workspace/java/vertx-mqtt/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ vertx-mqtt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 31 source files to /Users/dulongshao/workspace/java/vertx-mqtt/target/classes
+[INFO] /Users/dulongshao/workspace/java/vertx-mqtt/src/main/java/io/vertx/mqtt/impl/MqttServerConnection.java: /Users/dulongshao/workspace/java/vertx-mqtt/src/main/java/io/vertx/mqtt/impl/MqttServerConnection.java使用或覆盖了已过时的 API。
+[INFO] /Users/dulongshao/workspace/java/vertx-mqtt/src/main/java/io/vertx/mqtt/impl/MqttServerConnection.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ vertx-mqtt ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/dulongshao/workspace/java/vertx-mqtt/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ vertx-mqtt ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ vertx-mqtt ---
+[INFO] Surefire report directory: /Users/dulongshao/workspace/java/vertx-mqtt/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running io.vertx.mqtt.test.server.MqttServerEndpointStatusTest
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+MQTT remote client disconnected 
+MQTT server listening on port 1883 
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.779 sec - in io.vertx.mqtt.test.server.MqttServerEndpointStatusTest
+Running io.vertx.mqtt.test.server.MqttServerTest
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+Client connected client-0 
+Client connected client-1 
+Client connected client-2 
+Client connected client-3 
+Client connected client-4 
+Client connected client-5 
+Client connected client-6 
+Client connected client-7 
+Client connected client-8 
+Client connected client-9 
+Client connected client-10 
+Client connected client-11 
+Client connected client-12 
+Client connected client-13 
+Client connected client-14 
+Client connected client-15 
+Client connected client-16 
+Client connected client-17 
+Client connected client-18 
+Client connected client-19 
+Client connected client-20 
+Client connected client-21 
+Client connected client-22 
+Client connected client-23 
+Client connected client-24 
+Client connected client-25 
+Client connected client-26 
+Client connected client-27 
+Client connected client-28 
+Client connected client-29 
+Client connected client-30 
+Client connected client-31 
+Client connected client-32 
+Client connected client-33 
+Client connected client-34 
+Client connected client-35 
+Client connected client-36 
+Client connected client-37 
+Client connected client-38 
+Client connected client-39 
+Client connected client-40 
+Client connected client-41 
+Client connected client-42 
+Client connected client-43 
+Client connected client-44 
+Client connected client-45 
+Client connected client-46 
+Client connected client-47 
+Client connected client-48 
+Client connected client-49 
+Client connected client-50 
+Client connected client-51 
+Client connected client-52 
+Client connected client-53 
+Client connected client-54 
+Client connected client-55 
+Client connected client-56 
+Client connected client-57 
+Client connected client-58 
+Client connected client-59 
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.396 sec - in io.vertx.mqtt.test.server.MqttServerTest
+Running io.vertx.mqtt.test.server.MqttServerWithProxyConnectionTest
+MQTT server listening on port 1883 
+haproxy server with V1_TCP4 started
+client remoteAddress: 1.1.1.1:12345
+haproxy server stopped
+MQTT server listening on port 1883 
+haproxy server with V2_TCP4 started
+client remoteAddress: 1.1.1.1:12345
+haproxy server stopped
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 sec - in io.vertx.mqtt.test.server.MqttServerWithProxyConnectionTest
+Running io.vertx.mqtt.test.server.MqttServerNetworkIssueTest
+MQTT server listening on port 1883 
+Proxy server started on port 18830 
+Proxy client connected to localhost:1883 
+127.0.0.1:50395 ---> localhost:1883 
+127.0.0.1:18830 <--- 127.0.0.1:50396 
+MQTT remote client connection closed 
+Elapsed : 7022 
+Proxy server stopped 
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.044 sec - in io.vertx.mqtt.test.server.MqttServerNetworkIssueTest
+Running io.vertx.mqtt.test.server.MqttServerClientIdentifierTest
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+invalid clientIdentifier: invalid-id-with-24-chars 
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec - in io.vertx.mqtt.test.server.MqttServerClientIdentifierTest
+Running io.vertx.mqtt.test.server.MqttServerUnsubscribeTest
+MQTT server listening on port 1883 
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec - in io.vertx.mqtt.test.server.MqttServerUnsubscribeTest
+Running io.vertx.mqtt.test.server.MqttServerConnectionTest
+MQTT server listening on port 1883 
+return code = CONNECTION_ACCEPTED 
+client id = 12345 
+MQTT server listening on port 1883 
+No CONNECT sent in 5 secs. Closing connection. 
+MQTT server listening on port 1883 
+return code = CONNECTION_REFUSED_SERVER_UNAVAILABLE 
+return code = CONNECTION_REFUSED_SERVER_UNAVAILABLE 
+MQTT server listening on port 1883 
+return code = CONNECTION_REFUSED_NOT_AUTHORIZED 
+return code = CONNECTION_REFUSED_NOT_AUTHORIZED 
+MQTT server listening on port 1883 
+return code = CONNECTION_ACCEPTED 
+client id = 12345 
+MQTT server listening on port 1883 
+return code = CONNECTION_ACCEPTED 
+client id = 70ace356-7583-43ff-a0ba-fe0b037512fd 
+MQTT server listening on port 1883 
+return code = CONNECTION_REFUSED_BAD_USER_NAME_OR_PASSWORD 
+return code = CONNECTION_REFUSED_BAD_USER_NAME_OR_PASSWORD 
+MQTT server listening on port 1883 
+return code = CONNECTION_REFUSED_UNACCEPTABLE_PROTOCOL_VERSION 
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+return code = CONNECTION_REFUSED_IDENTIFIER_REJECTED 
+return code = CONNECTION_REFUSED_IDENTIFIER_REJECTED 
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.182 sec - in io.vertx.mqtt.test.server.MqttServerConnectionTest
+Running io.vertx.mqtt.test.server.MqttServerSslTest
+MQTT server listening on port 8883 
+Just received message on [/my_topic] payload [Hello Vert.x MQTT Server] with QoS [AT_MOST_ONCE] 
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.981 sec - in io.vertx.mqtt.test.server.MqttServerSslTest
+Running io.vertx.mqtt.test.server.MqttServerBadClientTest
+MQTT server listening on port 1883 
+Unhandled exception 
+java.lang.IllegalStateException: Received an MQTT packet from a not connected client (CONNECT not sent yet)
+	at io.vertx.mqtt.impl.MqttServerConnection.checkConnected(MqttServerConnection.java:427)
+	at io.vertx.mqtt.impl.MqttServerConnection.handlePublish(MqttServerConnection.java:329)
+	at io.vertx.mqtt.impl.MqttServerConnection.handleMessage(MqttServerConnection.java:143)
+	at io.vertx.mqtt.impl.MqttServerImpl.lambda$null$0(MqttServerImpl.java:75)
+	at io.vertx.core.net.impl.NetSocketImpl.lambda$new$2(NetSocketImpl.java:100)
+	at io.vertx.core.streams.impl.InboundBuffer.handleEvent(InboundBuffer.java:240)
+	at io.vertx.core.streams.impl.InboundBuffer.write(InboundBuffer.java:130)
+	at io.vertx.core.net.impl.NetSocketImpl.lambda$handleMessage$10(NetSocketImpl.java:381)
+	at io.vertx.core.impl.AbstractContext.emit(AbstractContext.java:181)
+	at io.vertx.core.impl.AbstractContext.lambda$dispatch$0(AbstractContext.java:84)
+	at io.vertx.core.impl.EventLoopContext.schedule(EventLoopContext.java:59)
+	at io.vertx.core.impl.AbstractContext.schedule(AbstractContext.java:94)
+	at io.vertx.core.impl.AbstractContext.dispatch(AbstractContext.java:84)
+	at io.vertx.core.net.impl.NetSocketImpl.handleMessage(NetSocketImpl.java:380)
+	at io.vertx.core.net.impl.ConnectionBase.read(ConnectionBase.java:127)
+	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:146)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+unknown message type: 15 
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec - in io.vertx.mqtt.test.server.MqttServerBadClientTest
+Running io.vertx.mqtt.test.server.MqttServerPublishTest
+MQTT server listening on port 1883 
+Just received message [Hello Vert.x MQTT Server] on topic [/my_topic] with QoS [0] 
+MQTT server listening on port 1883 
+Just received message [Hello Vert.x MQTT Server] on topic [/my_topic] with QoS [1] 
+MQTT server listening on port 1883 
+Just received message [Hello Vert.x MQTT Server] on topic [/my_topic] with QoS [2] 
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec - in io.vertx.mqtt.test.server.MqttServerPublishTest
+Running io.vertx.mqtt.test.server.MqttServerMaxMessageSizeTest
+MQTT server listening on port 1883 
+Exception raised 
+io.netty.handler.codec.DecoderException: too large message: 62 bytes
+	at io.netty.handler.codec.mqtt.MqttDecoder.decode(MqttDecoder.java:88)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:501)
+	at io.netty.handler.codec.ReplayingDecoder.callDecode(ReplayingDecoder.java:366)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:276)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in io.vertx.mqtt.test.server.MqttServerMaxMessageSizeTest
+Running io.vertx.mqtt.test.server.MqttServerSubscribeTest
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+MqttException (128)
+	at org.eclipse.paho.client.mqttv3.MqttClient.subscribe(MqttClient.java:329)
+	at io.vertx.mqtt.test.server.MqttServerSubscribeTest.subscribe(MqttServerSubscribeTest.java:100)
+	at io.vertx.mqtt.test.server.MqttServerSubscribeTest.subscribeFailure(MqttServerSubscribeTest.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.invokeTestMethod(VertxUnitRunner.java:95)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.lambda$invokeExplosively$0(VertxUnitRunner.java:114)
+	at io.vertx.ext.unit.impl.TestContextImpl.run(TestContextImpl.java:90)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.invokeExplosively(VertxUnitRunner.java:130)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.access$000(VertxUnitRunner.java:39)
+	at io.vertx.ext.unit.junit.VertxUnitRunner$1.evaluate(VertxUnitRunner.java:84)
+	at io.vertx.ext.unit.junit.VertxUnitRunner$2.evaluate(VertxUnitRunner.java:196)
+	at io.vertx.ext.unit.junit.VertxUnitRunner$3.evaluate(VertxUnitRunner.java:211)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+MQTT server listening on port 1883 
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec - in io.vertx.mqtt.test.server.MqttServerSubscribeTest
+Running io.vertx.mqtt.test.server.MqttServerClientCertSslTest
+MQTT server listening on port 8883 
+Trusted client connected 
+Just received message on [/my_topic] payload [Hello Vert.x MQTT Server] with QoS [AT_MOST_ONCE] 
+MQTT server listening on port 8883 
+Untrusted client connected 
+Just received message on [/my_topic] payload [Hello Vert.x MQTT Server] with QoS [AT_MOST_ONCE] 
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.784 sec - in io.vertx.mqtt.test.server.MqttServerClientCertSslTest
+Running io.vertx.mqtt.test.server.MqttServerClientPublishTest
+MQTT server listening on port 1883 
+Just received message on [/my_topic] payload [Hello Vert.x MQTT Server] with QoS [AT_MOST_ONCE] 
+MQTT server listening on port 1883 
+Just received message on [/my_topic] payload [Hello Vert.x MQTT Server] with QoS [AT_LEAST_ONCE] 
+MQTT server listening on port 1883 
+Just received message on [/my_topic] payload [Hello Vert.x MQTT Server] with QoS [EXACTLY_ONCE] 
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec - in io.vertx.mqtt.test.server.MqttServerClientPublishTest
+Running io.vertx.mqtt.test.server.MqttServerDisconnectTest
+MQTT server listening on port 1883 
+已连接客户机 (32100)
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:31)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms.close(ClientComms.java:189)
+	at org.eclipse.paho.client.mqttv3.MqttAsyncClient.close(MqttAsyncClient.java:1172)
+	at org.eclipse.paho.client.mqttv3.MqttClient.close(MqttClient.java:439)
+	at io.vertx.mqtt.test.server.MqttServerDisconnectTest.bruteDisconnect(MqttServerDisconnectTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.invokeTestMethod(VertxUnitRunner.java:95)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.lambda$invokeExplosively$0(VertxUnitRunner.java:114)
+	at io.vertx.ext.unit.impl.TestContextImpl.run(TestContextImpl.java:90)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.invokeExplosively(VertxUnitRunner.java:130)
+	at io.vertx.ext.unit.junit.VertxUnitRunner.access$000(VertxUnitRunner.java:39)
+	at io.vertx.ext.unit.junit.VertxUnitRunner$1.evaluate(VertxUnitRunner.java:84)
+	at io.vertx.ext.unit.junit.VertxUnitRunner$2.evaluate(VertxUnitRunner.java:196)
+	at io.vertx.ext.unit.junit.VertxUnitRunner$3.evaluate(VertxUnitRunner.java:211)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:283)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:173)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:128)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+MQTT remote client connection closed 
+MQTT server listening on port 1883 
+MQTT remote client disconnected 
+MQTT remote client connection closed 
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec - in io.vertx.mqtt.test.server.MqttServerDisconnectTest
+
+Results :
+
+Tests run: 40, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.692 s
+[INFO] Finished at: 2020-06-07T09:53:58+08:00
+[INFO] ------------------------------------------------------------------------
