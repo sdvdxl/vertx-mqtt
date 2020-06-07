@@ -71,7 +71,7 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
 
       byte[] message = new byte[MQTT_BIG_MESSAGE_SIZE];
 
-      client.publish(MQTT_TOPIC, message, 0, false);
+      client.publish(MQTT_TOPIC, message, 2, false);
       context.assertTrue(true);
       System.out.println("================================");
     } catch (MqttException e) {
