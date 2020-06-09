@@ -24,13 +24,22 @@ import io.vertx.ext.unit.TestContext;
 import io.vertx.ext.unit.junit.VertxUnitRunner;
 import io.vertx.mqtt.MqttEndpoint;
 import io.vertx.mqtt.MqttServerOptions;
-import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttAsyncClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.internal.ClientComms;
+import org.eclipse.paho.client.mqttv3.internal.Token;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.Date;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Formatter;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.stream.Stream;
 
 /**
  * MQTT server testing about the maximum message size
@@ -39,12 +48,23 @@ import org.junit.runner.RunWith;
 public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
 
   private static final Logger log = LoggerFactory.getLogger(MqttServerMaxMessageSizeTest.class);
-
-  private Async async;
-
   private static final String MQTT_TOPIC = "/my_topic";
   private static final int MQTT_MAX_MESSAGE_SIZE = 50;
   private static final int MQTT_BIG_MESSAGE_SIZE = MQTT_MAX_MESSAGE_SIZE + 1;
+
+  static {
+    Stream.of(ClientComms.class.getName(), Token.class.getName()).forEach(n->{
+      java.util.logging.Logger logger = java.util.logging.Logger.getLogger(n);
+      logger.setLevel(Level.FINE);
+      ConsoleHandler consoleHandler = new ConsoleHandler();
+      consoleHandler.setLevel(Level.FINE);
+      consoleHandler.setFormatter(new LoggerFormat());
+      logger.addHandler(consoleHandler);
+    });
+
+  }
+
+  private Async async;
 
   @Before
   public void before(TestContext context) {
@@ -63,19 +83,19 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
     try {
 
       MemoryPersistence persistence = new MemoryPersistence();
-      MqttClient client = new MqttClient(String.format("tcp://%s:%d", MQTT_SERVER_HOST, MQTT_SERVER_PORT), "12345", persistence);
-      client.connect();
+      MqttAsyncClient client = new MqttAsyncClient(String.format("tcp://%s:%d", MQTT_SERVER_HOST, MQTT_SERVER_PORT), "12345", persistence);
+      client.connect().waitForCompletion();
 
       byte[] message = new byte[MQTT_BIG_MESSAGE_SIZE];
 
-      client.publish(MQTT_TOPIC, message, 0, false);
+      client.publish(MQTT_TOPIC, message, 0, false).waitForCompletion();
 
       context.assertTrue(true);
 
     } catch (MqttException e) {
 
-      context.assertTrue(false);
       e.printStackTrace();
+      context.assertTrue(false);
     }
   }
 
@@ -98,5 +118,15 @@ public class MqttServerMaxMessageSizeTest extends MqttServerBaseTest {
     });
 
     endpoint.accept(false);
+  }
+
+  static class LoggerFormat extends Formatter {
+    @Override
+    public String format(LogRecord record) {
+      Date date = new Date();
+      String sDate = date.toString();
+      return "[" + sDate + "]" + "[" + record.getLevel() + "]"
+        + record.getSourceClassName() + record.getMessage() + "\n";
+    }
   }
 }
